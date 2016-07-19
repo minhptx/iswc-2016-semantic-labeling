@@ -1,0 +1,203 @@
+{
+    "id": "fifa-soccer-12-ultimate-team-data-player-database.csv",
+    "name": "fifa-soccer-12-ultimate-team-data-player-database.csv",
+    "description": null,
+    "sourceColumns": [
+        {
+            "id": "HN144346",
+            "hNodeId": "HN144346",
+            "columnName": " name"
+        },
+        {
+            "id": "HN144350",
+            "hNodeId": "HN144350",
+            "columnName": " foot"
+        },
+        {
+            "id": "HN144348",
+            "hNodeId": "HN144348",
+            "columnName": " position"
+        },
+        {
+            "id": "HN144349",
+            "hNodeId": "HN144349",
+            "columnName": " height"
+        }
+    ],
+    "mappingToSourceColumns": [
+        {
+            "id": "HN144346",
+            "sourceColumnId": "HN144346"
+        },
+        {
+            "id": "HN144348",
+            "sourceColumnId": "HN144348"
+        },
+        {
+            "id": "HN144350",
+            "sourceColumnId": "HN144350"
+        },
+        {
+            "id": "HN144349",
+            "sourceColumnId": "HN144349"
+        }
+    ],
+    "graph": {
+        "nodes": [
+            {
+                "id": "http://schema.org/Player1",
+                "label": {
+                    "uri": "http://schema.org/Player"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "HN144346",
+                "label": {
+                    "uri": "HN144346"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN144346",
+                "columnName": " name",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN144346",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/name"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN144350",
+                "label": {
+                    "uri": "HN144350"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN144350",
+                "columnName": " foot",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN144350",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/strongFoot"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN144348",
+                "label": {
+                    "uri": "HN144348"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN144348",
+                "columnName": " position",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN144348",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/playPosition"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN144349",
+                "label": {
+                    "uri": "HN144349"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN144349",
+                "columnName": " height",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN144349",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/height"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            }
+        ],
+        "links": [
+            {
+                "id": "http://schema.org/Player1---http://schema.org/name---HN144346",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/name"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/strongFoot---HN144350",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/strongFoot"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/playPosition---HN144348",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/playPosition"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/height---HN144349",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/height"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            }
+        ]
+    }
+}

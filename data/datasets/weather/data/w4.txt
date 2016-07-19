@@ -1,0 +1,156 @@
+11
+
+datetime:date
+11
+9 24-May-05
+9 31-May-05
+9 31-May-05
+9 31-May-05
+9 31-May-05
+8 1-Jun-05
+8 1-Jun-05
+8 2-Jun-05
+8 2-Jun-05
+8 3-Jun-05
+8 3-Jun-05
+
+datetime:time
+11
+4 NULL
+7 7:01 PM
+11 6:30 PM EDT
+4 NULL
+4 NULL
+11 6:51 PM EDT
+4 NULL
+4 NULL
+4 NULL
+4 NULL
+4 NULL
+
+Place
+11
+26 "Santa Barbara California"
+54 "Amateur Radio Station - AG2S Hillsborough New Jersey"
+43 "Crystal Shores Cedar Point North Carolina"
+26 "Santa Barbara California"
+25 "Santa Monica California"
+23 "Central Park New York"
+26 "Santa Barbara California"
+23 "Central Park New York"
+16 "Bklyn New York"
+54 "Amateur Radio Station - AG2S Hillsborough New Jersey"
+17 "Orlando Florida"
+
+temperature
+11
+4 63 F
+6 74.8 F
+6 72.1 F
+4 68 F
+4 66 F
+4 70 F
+4 64 F
+4 66 F
+6 61.7 F
+6 71.1 F
+4 79 F
+
+tempinf
+11
+4 63.0
+4 74.8
+4 72.1
+4 68.0
+4 66.0
+4 70.0
+4 64.0
+4 66.0
+4 61.7
+4 71.1
+4 79.0
+
+sky
+11
+8 Overcast
+5 Clear
+13 Mostly Cloudy
+5 Clear
+5 Clear
+5 Clear
+8 Overcast
+5 Clear
+5 Clear
+5 Clear
+10 Light Rain
+
+windspeed
+11
+5 5 mph
+7 2.7 mph
+5 3 mph
+5 9 mph
+6 14 mph
+5 8 mph
+5 5 mph
+5 4 mph
+5 1 mph
+5 4 mph
+5 5 mph
+
+windspeedinmph
+11
+3 5.0
+3 2.7
+3 3.0
+3 9.0
+4 14.0
+3 8.0
+3 5.0
+3 4.0
+3 1.0
+3 4.0
+3 5.0
+
+winddir
+11
+2 SW
+2 SE
+3 ESE
+4 West
+3 WSW
+3 ESE
+8 Variable
+8 Variable
+8 Variable
+3 ESE
+3 SSE
+
+visibility
+11
+9 4.0 miles
+4 NULL
+4 NULL
+10 10.0 miles
+9 9.0 miles
+10 10.0 miles
+9 7.0 miles
+10 10.0 miles
+4 NULL
+4 NULL
+10 10.0 miles
+
+visibilityinmi
+11
+3 4.0
+4 NULL
+4 NULL
+4 10.0
+3 9.0
+4 10.0
+3 7.0
+4 10.0
+4 NULL
+4 NULL
+4 10.0
+

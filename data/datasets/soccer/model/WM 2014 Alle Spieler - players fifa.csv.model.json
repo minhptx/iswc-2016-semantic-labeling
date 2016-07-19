@@ -1,0 +1,866 @@
+{
+    "id": "WM 2014 Alle Spieler - players fifa.csv",
+    "name": "WM 2014 Alle Spieler - players fifa.csv",
+    "description": null,
+    "sourceColumns": [
+        {
+            "id": "HN355972",
+            "hNodeId": "HN355972",
+            "columnName": "Position"
+        },
+        {
+            "id": "HN355971",
+            "hNodeId": "HN355971",
+            "columnName": "Player"
+        },
+        {
+            "id": "HN355979",
+            "hNodeId": "HN355979",
+            "columnName": "Country"
+        },
+        {
+            "id": "HN355978",
+            "hNodeId": "HN355978",
+            "columnName": "Height (cm)"
+        },
+        {
+            "id": "HN355977",
+            "hNodeId": "HN355977",
+            "columnName": "Age"
+        },
+        {
+            "id": "HN355976",
+            "hNodeId": "HN355976",
+            "columnName": "D.O.B"
+        },
+        {
+            "id": "HN355980",
+            "hNodeId": "HN355980",
+            "columnName": "Caps"
+        },
+        {
+            "id": "HN355981",
+            "hNodeId": "HN355981",
+            "columnName": "International goals"
+        },
+        {
+            "id": "HN355975",
+            "hNodeId": "HN355975",
+            "columnName": "Club (country)"
+        },
+        {
+            "id": "HN355974",
+            "hNodeId": "HN355974",
+            "columnName": "Club"
+        },
+        {
+            "id": "HN355973",
+            "hNodeId": "HN355973",
+            "columnName": "Number"
+        }
+    ],
+    "mappingToSourceColumns": [
+        {
+            "id": "HN355972",
+            "sourceColumnId": "HN355972"
+        },
+        {
+            "id": "HN355971",
+            "sourceColumnId": "HN355971"
+        },
+        {
+            "id": "HN355979",
+            "sourceColumnId": "HN355979"
+        },
+        {
+            "id": "HN355978",
+            "sourceColumnId": "HN355978"
+        },
+        {
+            "id": "HN355977",
+            "sourceColumnId": "HN355977"
+        },
+        {
+            "id": "HN355980",
+            "sourceColumnId": "HN355980"
+        },
+        {
+            "id": "HN355976",
+            "sourceColumnId": "HN355976"
+        },
+        {
+            "id": "HN355975",
+            "sourceColumnId": "HN355975"
+        },
+        {
+            "id": "HN355981",
+            "sourceColumnId": "HN355981"
+        },
+        {
+            "id": "HN355974",
+            "sourceColumnId": "HN355974"
+        },
+        {
+            "id": "HN355973",
+            "sourceColumnId": "HN355973"
+        }
+    ],
+    "graph": {
+        "nodes": [
+            {
+                "id": "http://schema.org/Player1",
+                "label": {
+                    "uri": "http://schema.org/Player"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/SportsClub1",
+                "label": {
+                    "uri": "http://schema.org/SportsClub"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/SportsTeam1",
+                "label": {
+                    "uri": "http://schema.org/SportsTeam"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/League1",
+                "label": {
+                    "uri": "http://schema.org/League"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "HN355972",
+                "label": {
+                    "uri": "HN355972"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN355972",
+                "columnName": "Position",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN355972",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/playPosition"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN355971",
+                "label": {
+                    "uri": "HN355971"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN355971",
+                "columnName": "Player",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN355971",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/name"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN355979",
+                "label": {
+                    "uri": "HN355979"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN355979",
+                "columnName": "Country",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN355979",
+                        "domain": {
+                            "uri": "http://schema.org/SportsTeam"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/name"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN355978",
+                "label": {
+                    "uri": "HN355978"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN355978",
+                "columnName": "Height (cm)",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/height"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": [
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/height"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.9999999999999455
+                    },
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/weight"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 5.449376866789152E-14
+                    },
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/tag"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/SportsTeam"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/ranking"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Person"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/goalScored"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/playPosition"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Person"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/playPosition"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/goalScored"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Person"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/catalogNumber"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Person"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/numberedPosition"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/age"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355978",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/numberOfPlayedGames"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    }
+                ],
+                "modelIds": null
+            },
+            {
+                "id": "HN355977",
+                "label": {
+                    "uri": "HN355977"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN355977",
+                "columnName": "Age",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN355977",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/age"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN355976",
+                "label": {
+                    "uri": "HN355976"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN355976",
+                "columnName": "D.O.B",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN355976",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/birthDate"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN355980",
+                "label": {
+                    "uri": "HN355980"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN355980",
+                "columnName": "Caps",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/numberOfPlayedGames"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": [
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/numberOfPlayedGames"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.8714357538714911
+                    },
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/SportsTeam"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/ranking"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.12856353228888587
+                    },
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Person"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/numberedPosition"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 2.3792453981891707E-7
+                    },
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/tag"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 2.3792453981891707E-7
+                    },
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Person"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/catalogNumber"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 2.3792453981891707E-7
+                    },
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/age"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 6.600358258813853E-11
+                    },
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/playPosition"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/goalScored"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/weight"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/height"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Person"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/goalScored"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    },
+                    {
+                        "hNodeId": "HN355980",
+                        "domain": {
+                            "uri": "http://schema.org/Person"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/playPosition"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.0
+                    }
+                ],
+                "modelIds": null
+            },
+            {
+                "id": "HN355981",
+                "label": {
+                    "uri": "HN355981"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN355981",
+                "columnName": "International goals",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN355981",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/goalScored"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN355975",
+                "label": {
+                    "uri": "HN355975"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN355975",
+                "columnName": "Club (country)",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN355975",
+                        "domain": {
+                            "uri": "http://schema.org/League"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/name"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN355974",
+                "label": {
+                    "uri": "HN355974"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN355974",
+                "columnName": "Club",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN355974",
+                        "domain": {
+                            "uri": "http://schema.org/SportsClub"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/name"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN355973",
+                "label": {
+                    "uri": "HN355973"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN355973",
+                "columnName": "Number",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN355973",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/tag"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            }
+        ],
+        "links": [
+            {
+                "id": "http://schema.org/Player1---http://schema.org/inClub---http://schema.org/SportsClub1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/inClub"
+                },
+                "objectPropertyType": "None",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/inNationalTeam---http://schema.org/SportsTeam1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/inNationalTeam"
+                },
+                "objectPropertyType": "None",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/SportsClub1---http://schema.org/inLeague---http://schema.org/League1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/inLeague"
+                },
+                "objectPropertyType": "None",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/playPosition---HN355972",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/playPosition"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/name---HN355971",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/name"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/SportsTeam1---http://schema.org/name---HN355979",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/name"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/height---HN355978",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/height"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/age---HN355977",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/age"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/birthDate---HN355976",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/birthDate"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/numberOfPlayedGames---HN355980",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/numberOfPlayedGames"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/goalScored---HN355981",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/goalScored"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/League1---http://schema.org/name---HN355975",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/name"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/SportsClub1---http://schema.org/name---HN355974",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/name"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/tag---HN355973",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/tag"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            }
+        ]
+    }
+}

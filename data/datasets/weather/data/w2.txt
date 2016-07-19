@@ -1,0 +1,1519 @@
+11
+
+datetime:time
+135
+7 1:51 PM
+8 11:35 AM
+7 2:35 PM
+7 2:54 PM
+8 11:56 AM
+7 2:54 PM
+7 2:53 PM
+8 12:15 PM
+7 2:51 PM
+7 1:56 PM
+8 11:55 AM
+7 6:53 AM
+7 1:53 PM
+7 1:53 PM
+7 3:40 PM
+7 2:15 PM
+8 12:53 PM
+7 1:54 PM
+7 2:54 PM
+7 2:51 PM
+7 3:00 PM
+7 2:45 PM
+7 1:53 PM
+7 2:51 PM
+7 2:15 PM
+8 11:50 AM
+8 11:56 AM
+7 1:23 PM
+7 1:53 PM
+7 2:54 PM
+7 2:53 PM
+8 10:55 AM
+8 12:32 PM
+8 12:55 PM
+7 3:20 PM
+7 2:15 PM
+7 1:53 PM
+8 11:53 AM
+7 2:51 PM
+8 11:56 AM
+7 2:30 PM
+8 12:53 PM
+7 1:55 PM
+7 1:54 PM
+8 12:35 PM
+7 N/:A AM
+8 11:59 AM
+7 1:53 PM
+7 1:52 PM
+7 1:53 PM
+8 11:16 AM
+8 10:53 AM
+7 2:55 PM
+7 1:54 PM
+7 2:56 PM
+7 8:53 AM
+7 2:54 PM
+8 12:53 PM
+7 2:51 PM
+7 1:51 PM
+7 2:53 PM
+8 11:47 AM
+7 2:15 PM
+7 1:54 PM
+7 1:52 PM
+7 3:15 PM
+8 11:53 AM
+8 11:51 AM
+7 1:53 PM
+7 1:53 PM
+8 11:54 AM
+7 2:53 PM
+8 11:53 AM
+7 1:52 PM
+8 12:50 PM
+7 1:55 PM
+7 2:53 PM
+7 3:51 PM
+7 2:46 PM
+8 10:53 AM
+8 12:53 PM
+8 12:51 PM
+8 12:32 PM
+7 2:54 PM
+7 2:35 PM
+7 1:55 PM
+7 1:53 PM
+8 12:53 PM
+7 2:53 PM
+8 12:53 PM
+7 3:40 PM
+7 2:54 PM
+7 2:45 PM
+7 1:53 PM
+7 2:54 PM
+8 11:53 AM
+7 3:51 PM
+7 3:35 PM
+7 2:51 PM
+7 1:35 PM
+7 1:15 PM
+7 1:53 PM
+7 3:51 PM
+7 2:54 PM
+7 1:53 PM
+7 2:53 PM
+7 3:51 PM
+7 9:53 AM
+7 2:53 PM
+7 3:26 PM
+8 11:56 AM
+7 3:55 PM
+7 3:53 PM
+7 3:51 PM
+7 3:35 PM
+7 3:54 PM
+7 2:55 PM
+7 2:53 PM
+8 12:53 PM
+7 8:56 AM
+7 3:55 PM
+7 2:15 PM
+7 2:35 PM
+7 3:56 PM
+7 3:51 PM
+7 2:54 PM
+7 3:54 PM
+7 2:52 PM
+7 2:15 PM
+7 2:51 PM
+7 2:55 PM
+7 3:54 PM
+8 11:56 AM
+7 3:43 PM
+7 3:51 PM
+
+Place
+135
+19 "Linden New Jersey"
+19 "North Bend Oregon"
+17 "Gadsden Alabama"
+22 "Boston Massachusetts"
+21 "Salt Lake City Utah"
+16 "Salem Virginia"
+24 "Manchester Connecticut"
+22 "Coeur d' Alene Idaho"
+17 "Washington D.C."
+19 "Evanston Illinois"
+19 "Milton Washington"
+15 "Kailua Hawaii"
+16 "Merna Nebraska"
+21 "Jackson Mississippi"
+18 "Liberty Kentucky"
+17 "Opelika Alabama"
+15 "Houston Texas"
+24 "Shawnee Mission Kansas"
+18 "Palmyra New York"
+20 "Arlington Virginia"
+21 "Miami Beach Florida"
+23 "Middle River Maryland"
+21 "Nashville Tennessee"
+26 "Charlotte North Carolina"
+22 "Alexandria Louisiana"
+24 "Benton City Washington"
+15 "Dayton Nevada"
+18 "Evanston Wyoming"
+23 "Southaven Mississippi"
+20 "Greenwood Delaware"
+25 "Plantsville Connecticut"
+16 "Tucson Arizona"
+25 "Cottonwood Falls Kansas"
+19 "Whitefish Montana"
+18 "Chauncey Georgia"
+20 "Rushmore Minnesota"
+14 "Dallas Texas"
+20 "Redmond Washington"
+17 "Atlanta Georgia"
+19 "Flagstaff Arizona"
+18 "Fremont Nebraska"
+18 "Linden Tennessee"
+16 "Milton Florida"
+17 "Laurel Delaware"
+21 "La Fontaine Indiana"
+25 "Rapid City South Dakota"
+22 "Stanley North Dakota"
+18 "Guthrie Oklahoma"
+23 "Bismarck North Dakota"
+22 "Saint Louis Missouri"
+19 "Petersburg Alaska"
+25 "Columbia South Carolina"
+17 "Fraser Michigan"
+15 "Troy Missouri"
+23 "Hubert North Carolina"
+17 "Honolulu Hawaii"
+32 "Great Barrington Massachusetts"
+22 "Sturtevant Wisconsin"
+16 "Yarmouth Maine"
+21 "Florissant Missouri"
+26 "Manchester New Hampshire"
+24 "Los Angeles California"
+26 "Denham Springs Louisiana"
+23 "Fairfield Connecticut"
+21 "Milwaukee Wisconsin"
+19 "Belleview Florida"
+21 "Winner South Dakota"
+17 "Laughlin Nevada"
+22 "Dover Foxcroft Maine"
+25 "Mount Prospect Illinois"
+17 "Quincy Illinois"
+15 "Tampa Florida"
+22 "Tinley Park Illinois"
+21 "Milwaukee Wisconsin"
+21 "Glenwood New Mexico"
+18 "Duluth Minnesota"
+25 "Hillsborough New Jersey"
+22 "Warner New Hampshire"
+15 "Mena Arkansas"
+19 "Tacoma Washington"
+21 "Garden Valley Idaho"
+16 "Victoria Texas"
+16 "Emporia Kansas"
+21 "Madison Mississippi"
+19 "Waupaca Wisconsin"
+22 "Indianapolis Indiana"
+21 "Louisville Kentucky"
+13 "Boise Idaho"
+18 "Detroit Michigan"
+19 "Longmont Colorado"
+24 "Pacolet South Carolina"
+28 "Waynesville North Carolina"
+21 "Dardanelle Arkansas"
+22 "Saint Louis Missouri"
+25 "Cambridge Massachusetts"
+20 "Bowling Green Ohio"
+15 "Columbus Ohio"
+21 "Winsted Connecticut"
+19 "Bethesda Maryland"
+19 "Clovis New Mexico"
+11 "Orem Utah"
+19 "Memphis Tennessee"
+22 "Cresskill New Jersey"
+22 "Boston Massachusetts"
+21 "Edgewood New Mexico"
+17 "Fishers Indiana"
+26 "Charlotte North Carolina"
+18 "Anchorage Alaska"
+31 "Travelers Rest South Carolina"
+26 "Morgantown West Virginia"
+15 "Dallas Oregon"
+23 "Johnston Rhode Island"
+22 "Newtown Pennsylvania"
+19 "New York New York"
+16 "Kinde Michigan"
+21 "Winchester Kentucky"
+22 "Indianapolis Indiana"
+20 "Jonesboro Arkansas"
+19 "Montrose Colorado"
+16 "Kaneohe Hawaii"
+23 "Laconia New Hampshire"
+18 "Walker Louisiana"
+13 "Ankeny Iowa"
+13 "Dayton Ohio"
+22 "Edgewater New Jersey"
+22 "Holden West Virginia"
+15 "Stowe Vermont"
+21 "Milwaukee Wisconsin"
+21 "Marinette Wisconsin"
+25 "Cumberland Center Maine"
+27 "Springfield Massachusetts"
+18 "Buffalo New York"
+14 "Mesa Arizona"
+20 "Exton Pennsylvania"
+19 "Newark New Jersey"
+
+temperature
+135
+4 88 F
+4 55 F
+4 86 F
+4 61 F
+4 45 F
+4 90 F
+4 83 F
+4 57 F
+4 88 F
+4 86 F
+4 55 F
+4 78 F
+4 83 F
+4 73 F
+4 91 F
+4 81 F
+4 90 F
+4 85 F
+4 84 F
+4 88 F
+4 79 F
+4 84 F
+4 84 F
+4 88 F
+4 90 F
+4 65 F
+4 59 F
+4 41 F
+4 74 F
+4 89 F
+4 80 F
+4 87 F
+4 81 F
+4 54 F
+4 91 F
+4 84 F
+4 91 F
+4 57 F
+4 87 F
+4 65 F
+4 88 F
+4 73 F
+4 75 F
+4 88 F
+4 82 F
+5 N/A F
+4 68 F
+4 88 F
+4 79 F
+4 73 F
+4 61 F
+4 83 F
+4 84 F
+4 76 F
+4 86 F
+4 83 F
+4 83 F
+4 83 F
+4 50 F
+4 75 F
+4 62 F
+4 72 F
+4 79 F
+4 65 F
+4 84 F
+4 88 F
+4 82 F
+4 86 F
+4 55 F
+4 88 F
+4 84 F
+4 88 F
+4 83 F
+4 84 F
+4 90 F
+4 68 F
+4 89 F
+4 63 F
+4 88 F
+4 57 F
+4 59 F
+4 89 F
+4 81 F
+4 77 F
+4 79 F
+4 85 F
+4 90 F
+4 59 F
+4 84 F
+4 81 F
+4 90 F
+4 83 F
+4 91 F
+4 73 F
+4 61 F
+4 79 F
+4 88 F
+4 75 F
+4 88 F
+4 84 F
+4 52 F
+4 74 F
+4 89 F
+4 61 F
+4 82 F
+4 85 F
+4 86 F
+4 54 F
+4 88 F
+4 66 F
+4 55 F
+4 73 F
+4 90 F
+4 83 F
+4 79 F
+4 89 F
+4 87 F
+4 91 F
+4 78 F
+4 80 F
+4 57 F
+4 79 F
+4 86 F
+4 86 F
+4 83 F
+4 85 F
+4 75 F
+4 85 F
+4 77 F
+4 50 F
+4 82 F
+4 78 F
+4 86 F
+4 88 F
+4 88 F
+
+tempinf
+135
+4 88.0
+4 55.0
+4 86.0
+4 61.0
+4 45.0
+4 90.0
+4 83.0
+4 57.0
+4 88.0
+4 86.0
+4 55.0
+4 78.0
+4 83.0
+4 73.0
+4 91.0
+4 81.0
+4 90.0
+4 85.0
+4 84.0
+4 88.0
+4 79.0
+4 84.0
+4 84.0
+4 88.0
+4 90.0
+4 65.0
+4 59.0
+4 41.0
+4 74.0
+4 89.0
+4 80.0
+4 87.0
+4 81.0
+4 54.0
+4 91.0
+4 84.0
+4 91.0
+4 57.0
+4 87.0
+4 65.0
+4 88.0
+4 73.0
+4 75.0
+4 88.0
+4 82.0
+3 N/A
+4 68.0
+4 88.0
+4 79.0
+4 73.0
+4 61.0
+4 83.0
+4 84.0
+4 76.0
+4 86.0
+4 83.0
+4 83.0
+4 83.0
+4 50.0
+4 75.0
+4 62.0
+4 72.0
+4 79.0
+4 65.0
+4 84.0
+4 88.0
+4 82.0
+4 86.0
+4 55.0
+4 88.0
+4 84.0
+4 88.0
+4 83.0
+4 84.0
+4 90.0
+4 68.0
+4 89.0
+4 63.0
+4 88.0
+4 57.0
+4 59.0
+4 89.0
+4 81.0
+4 77.0
+4 79.0
+4 85.0
+4 90.0
+4 59.0
+4 84.0
+4 81.0
+4 90.0
+4 83.0
+4 91.0
+4 73.0
+4 61.0
+4 79.0
+4 88.0
+4 75.0
+4 88.0
+4 84.0
+4 52.0
+4 74.0
+4 89.0
+4 61.0
+4 82.0
+4 85.0
+4 86.0
+4 54.0
+4 88.0
+4 66.0
+4 55.0
+4 73.0
+4 90.0
+4 83.0
+4 79.0
+4 89.0
+4 87.0
+4 91.0
+4 78.0
+4 80.0
+4 57.0
+4 79.0
+4 86.0
+4 86.0
+4 83.0
+4 85.0
+4 75.0
+4 85.0
+4 77.0
+4 50.0
+4 82.0
+4 78.0
+4 86.0
+4 88.0
+4 88.0
+
+sky
+135
+13 Partly Cloudy
+13 Partly Cloudy
+13 Partly Cloudy
+13 Partly Cloudy
+10 Light Rain
+13 Partly Cloudy
+4 Fair
+4 Fair
+13 Partly Cloudy
+13 Partly Cloudy
+13 Mostly Cloudy
+4 Fair
+4 Fair
+10 Light Rain
+13 Partly Cloudy
+7 Thunder
+13 Mostly Cloudy
+13 Partly Cloudy
+13 Mostly Cloudy
+13 Partly Cloudy
+4 Rain
+4 Haze
+7 Thunder
+4 Haze
+13 Partly Cloudy
+6 Cloudy
+13 Partly Cloudy
+6 Cloudy
+6 Cloudy
+4 Fair
+4 Fair
+4 Fair
+13 Mostly Cloudy
+13 Mostly Cloudy
+4 Fair
+4 Fair
+13 Mostly Cloudy
+13 Mostly Cloudy
+13 Partly Cloudy
+4 Fair
+13 Partly Cloudy
+10 Light Rain
+13 Mostly Cloudy
+13 Partly Cloudy
+4 Fair
+6 (N/AC)
+13 Mostly Cloudy
+4 Fair
+4 Fair
+23 Light Rain with Thunder
+4 Fair
+4 Fair
+13 Partly Cloudy
+6 Cloudy
+13 Partly Cloudy
+13 Partly Cloudy
+13 Partly Cloudy
+13 Partly Cloudy
+3 Fog
+6 Cloudy
+6 Cloudy
+13 Partly Cloudy
+13 Mostly Cloudy
+4 Haze
+13 Partly Cloudy
+13 Partly Cloudy
+4 Fair
+5 Sunny
+6 Cloudy
+13 Partly Cloudy
+4 Fair
+13 Mostly Cloudy
+13 Mostly Cloudy
+13 Partly Cloudy
+4 Fair
+13 Partly Cloudy
+13 Partly Cloudy
+6 Cloudy
+4 Fair
+13 Partly Cloudy
+4 Fair
+4 Fair
+13 Mostly Cloudy
+6 Cloudy
+4 Fair
+13 Partly Cloudy
+13 Partly Cloudy
+4 Fair
+13 Partly Cloudy
+13 Partly Cloudy
+4 Fair
+13 Partly Cloudy
+23 Thunder in the Vicinity
+23 Light Rain with Thunder
+13 Partly Cloudy
+4 Fair
+13 Partly Cloudy
+4 Fair
+13 Partly Cloudy
+4 Fair
+4 Fair
+6 Cloudy
+4 Fair
+13 Partly Cloudy
+4 Fair
+4 Fair
+13 Mostly Cloudy
+13 Mostly Cloudy
+13 Partly Cloudy
+23 Light Rain with Thunder
+13 Mostly Cloudy
+4 Fair
+4 Fair
+4 Fair
+13 Partly Cloudy
+13 Partly Cloudy
+13 Partly Cloudy
+13 Partly Cloudy
+4 Fair
+13 Mostly Cloudy
+6 Cloudy
+13 Mostly Cloudy
+4 Fair
+4 Fair
+4 Fair
+13 Partly Cloudy
+4 Fair
+13 Partly Cloudy
+13 Partly Cloudy
+3 Fog
+4 Haze
+13 Partly Cloudy
+5 Sunny
+13 Partly Cloudy
+13 Mostly Cloudy
+
+windspeedinmph
+134
+4 12.0
+3 9.0
+3 9.0
+3 9.0
+3 9.0
+3 8.0
+4 13.0
+3 3.0
+4 13.0
+4 22.0
+3 9.0
+3 7.0
+4 21.0
+3 0.0
+3 0.0
+3 5.0
+3 9.0
+4 14.0
+4 17.0
+4 13.0
+3 5.0
+4 12.0
+3 5.0
+3 6.0
+3 6.0
+3 8.0
+4 17.0
+4 18.0
+4 10.0
+3 8.0
+4 13.0
+4 12.0
+4 13.0
+3 3.0
+3 7.0
+4 15.0
+4 13.0
+3 5.0
+3 8.0
+4 20.0
+4 13.0
+4 10.0
+3 0.0
+3 9.0
+3 7.0
+3 3.0
+4 10.0
+4 20.0
+3 6.0
+3 N/A
+3 3.0
+4 14.0
+3 6.0
+4 13.0
+4 12.0
+4 18.0
+4 14.0
+3 7.0
+3 0.0
+3 7.0
+3 7.0
+4 12.0
+4 15.0
+4 17.0
+3 5.0
+4 20.0
+4 18.0
+4 13.0
+4 15.0
+4 14.0
+3 6.0
+4 14.0
+4 17.0
+3 8.0
+4 17.0
+3 8.0
+3 7.0
+3 3.0
+3 8.0
+3 9.0
+4 16.0
+4 13.0
+3 6.0
+4 16.0
+3 8.0
+4 12.0
+3 9.0
+4 20.0
+4 12.0
+3 7.0
+4 10.0
+3 8.0
+3 6.0
+3 9.0
+4 15.0
+4 16.0
+4 12.0
+4 13.0
+4 20.0
+4 21.0
+4 10.0
+4 14.0
+3 9.0
+4 20.0
+4 10.0
+3 6.0
+3 6.0
+4 10.0
+3 9.0
+4 12.0
+3 7.0
+3 8.0
+3 8.0
+4 23.0
+3 9.0
+4 14.0
+4 14.0
+4 18.0
+3 9.0
+3 9.0
+4 12.0
+4 13.0
+4 15.0
+3 8.0
+3 0.0
+3 8.0
+4 20.0
+4 12.0
+3 7.0
+4 12.0
+4 20.0
+4 10.0
+3 6.0
+4 14.0
+
+windspeed
+135
+5 12mph
+1 ?
+1 ?
+1 ?
+1 ?
+12 8mph / 13kph
+13 13mph / 21kph
+11 3mph / 5kph
+13 13mph / 21kph
+13 22mph / 35kph
+1 ?
+12 7mph / 11kph
+13 21mph / 34kph
+11 0mph / 0kph
+11 0mph / 0kph
+11 5mph / 8kph
+1 ?
+13 14mph / 23kph
+13 17mph / 27kph
+13 13mph / 21kph
+11 5mph / 8kph
+5 12mph
+11 5mph / 8kph
+12 6mph / 10kph
+12 6mph / 10kph
+12 8mph / 13kph
+13 17mph / 27kph
+13 18mph / 29kph
+13 10mph / 16kph
+12 8mph / 13kph
+13 13mph / 21kph
+5 12mph
+13 13mph / 21kph
+11 3mph / 5kph
+12 7mph / 11kph
+13 15mph / 24kph
+13 13mph / 21kph
+11 5mph / 8kph
+12 8mph / 13kph
+13 20mph / 32kph
+13 13mph / 21kph
+13 10mph / 16kph
+11 0mph / 0kph
+1 ?
+12 7mph / 11kph
+6 N/Akph
+11 3mph / 5kph
+13 10mph / 16kph
+13 20mph / 32kph
+12 6mph / 10kph
+3 N/A
+11 3mph / 5kph
+13 14mph / 23kph
+12 6mph / 10kph
+13 13mph / 21kph
+5 12mph
+13 18mph / 29kph
+13 14mph / 23kph
+12 7mph / 11kph
+11 0mph / 0kph
+12 7mph / 11kph
+12 7mph / 11kph
+5 12mph
+13 15mph / 24kph
+13 17mph / 27kph
+11 5mph / 8kph
+13 20mph / 32kph
+13 18mph / 29kph
+13 13mph / 21kph
+13 15mph / 24kph
+13 14mph / 23kph
+12 6mph / 10kph
+13 14mph / 23kph
+13 17mph / 27kph
+12 8mph / 13kph
+13 17mph / 27kph
+12 8mph / 13kph
+12 7mph / 11kph
+11 3mph / 5kph
+12 8mph / 13kph
+1 ?
+13 16mph / 26kph
+13 13mph / 21kph
+12 6mph / 10kph
+13 16mph / 26kph
+12 8mph / 13kph
+5 12mph
+1 ?
+13 20mph / 32kph
+5 12mph
+12 7mph / 11kph
+13 10mph / 16kph
+12 8mph / 13kph
+12 6mph / 10kph
+1 ?
+13 15mph / 24kph
+13 16mph / 26kph
+5 12mph
+13 13mph / 21kph
+13 20mph / 32kph
+13 21mph / 34kph
+13 10mph / 16kph
+13 14mph / 23kph
+1 ?
+13 20mph / 32kph
+13 10mph / 16kph
+12 6mph / 10kph
+12 6mph / 10kph
+13 10mph / 16kph
+1 ?
+5 12mph
+12 7mph / 11kph
+12 8mph / 13kph
+12 8mph / 13kph
+13 23mph / 37kph
+1 ?
+13 14mph / 23kph
+13 14mph / 23kph
+13 18mph / 29kph
+1 ?
+1 ?
+5 12mph
+13 13mph / 21kph
+13 15mph / 24kph
+12 8mph / 13kph
+11 0mph / 0kph
+12 8mph / 13kph
+13 20mph / 32kph
+5 12mph
+12 7mph / 11kph
+5 12mph
+13 20mph / 32kph
+13 10mph / 16kph
+12 6mph / 10kph
+13 14mph / 23kph
+
+winddir
+135
+2 SE
+1 W
+3 WSW
+1 E
+1 E
+2 SW
+3 SSE
+3 WNW
+1 S
+1 W
+2 NW
+1 S
+3 SSE
+4 CALM
+4 CALM
+3 ESE
+3 SSE
+1 S
+2 SW
+1 S
+2 SE
+2 SE
+1 E
+2 SW
+3 SSE
+1 N
+3 WNW
+3 WNW
+1 E
+3 SSW
+3 SSW
+1 S
+3 SSE
+3 VAR
+3 SSE
+2 SW
+3 SSW
+1 N
+2 SE
+2 SW
+1 S
+3 WNW
+4 CALM
+1 S
+1 W
+3 N/A
+2 NE
+3 SSW
+3 ESE
+3 NNE
+0 
+3 VAR
+1 W
+3 ESE
+1 S
+1 E
+1 S
+1 W
+3 ENE
+4 CALM
+3 ESE
+3 VAR
+2 NE
+1 E
+1 W
+3 ENE
+1 S
+3 SSW
+1 S
+1 W
+3 WSW
+3 VAR
+3 WSW
+1 W
+2 SW
+3 WNW
+3 SSW
+1 S
+1 S
+1 W
+2 NW
+3 SSE
+3 SSE
+1 S
+1 W
+3 WSW
+1 W
+2 NW
+1 W
+1 W
+3 SSE
+3 SSW
+2 SE
+3 NNE
+1 E
+1 W
+3 WSW
+1 S
+1 S
+1 S
+2 NW
+1 E
+1 S
+1 E
+3 WSW
+1 W
+1 S
+3 WNW
+3 SSE
+2 SE
+1 S
+1 S
+1 S
+3 SSW
+3 WSW
+1 W
+1 W
+3 SSE
+3 WSW
+1 E
+3 ENE
+2 NE
+2 SW
+2 SW
+3 SSW
+4 CALM
+2 SW
+1 W
+3 WNW
+3 ENE
+1 S
+3 WSW
+1 S
+3 VAR
+3 SSE
+
+visibility
+135
+7 7.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+7 9.00 mi
+8 10.00 mi
+7 9.00 mi
+8 10.00 mi
+7 8.00 mi
+8 10.00 mi
+7 7.00 mi
+8 10.00 mi
+8 10.00 mi
+7 6.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+7 7.00 mi
+7 8.00 mi
+8 10.00 mi
+7 5.00 mi
+8 10.00 mi
+7 6.00 mi
+8 10.00 mi
+9 Unlimited
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+7 7.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+7 8.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+7 7.00 mi
+7 8.00 mi
+8 10.00 mi
+2 mi
+7 7.00 mi
+7 6.21 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+7 9.00 mi
+9 Unlimited
+8 10.00 mi
+7 7.00 mi
+8 10.00 mi
+7 9.00 mi
+8 10.00 mi
+7 0.50 mi
+8 10.00 mi
+7 7.00 mi
+8 10.00 mi
+8 10.00 mi
+7 4.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+9 Unlimited
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+7 8.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+9 Unlimited
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+7 8.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+7 7.00 mi
+8 10.00 mi
+7 9.00 mi
+7 6.00 mi
+8 10.00 mi
+7 7.00 mi
+7 8.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+7 7.00 mi
+7 9.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+8 10.00 mi
+7 9.00 mi
+7 9.00 mi
+8 10.00 mi
+7 8.00 mi
+7 0.50 mi
+7 6.00 mi
+8 10.00 mi
+9 Unlimited
+7 9.00 mi
+8 10.00 mi
+
+visibilityinmi
+135
+3 7.0
+4 10.0
+4 10.0
+4 10.0
+3 9.0
+4 10.0
+3 9.0
+4 10.0
+3 8.0
+4 10.0
+3 7.0
+4 10.0
+4 10.0
+3 6.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+3 7.0
+3 8.0
+4 10.0
+3 5.0
+4 10.0
+3 6.0
+4 10.0
+0 
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+3 7.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+3 8.0
+4 10.0
+4 10.0
+4 10.0
+3 7.0
+3 8.0
+4 10.0
+0 
+3 7.0
+0 
+4 10.0
+4 10.0
+4 10.0
+3 9.0
+0 
+4 10.0
+3 7.0
+4 10.0
+3 9.0
+4 10.0
+0 
+4 10.0
+3 7.0
+4 10.0
+4 10.0
+3 4.0
+4 10.0
+4 10.0
+4 10.0
+0 
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+3 8.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+0 
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+3 8.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+3 7.0
+4 10.0
+3 9.0
+3 6.0
+4 10.0
+3 7.0
+3 8.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+3 7.0
+3 9.0
+4 10.0
+4 10.0
+4 10.0
+4 10.0
+3 9.0
+3 9.0
+4 10.0
+3 8.0
+0 
+3 6.0
+4 10.0
+0 
+3 9.0
+4 10.0
+
+Zip
+135
+4 7036
+5 97459
+5 35903
+4 2120
+5 84102
+5 24153
+4 6040
+5 83814
+5 20007
+5 60201
+5 98354
+5 96734
+5 68856
+5 39212
+5 42539
+5 36801
+5 77041
+5 66216
+5 14522
+5 22204
+5 33160
+5 21220
+5 37201
+5 28202
+5 71302
+5 99320
+5 89403
+5 82930
+5 38671
+5 19950
+4 6479
+5 85741
+5 66845
+5 59937
+5 31011
+5 56168
+5 75204
+5 98052
+5 30302
+5 86001
+5 68025
+5 37096
+5 32570
+5 19956
+5 46940
+5 57702
+5 58784
+5 73044
+5 58501
+5 63138
+5 99833
+5 29201
+5 48026
+5 63379
+5 28539
+5 96801
+4 1230
+5 53177
+4 4096
+5 63033
+4 3101
+5 90001
+5 70726
+4 6824
+5 53228
+5 34420
+5 57580
+5 89029
+4 4426
+5 60056
+5 62301
+5 33602
+5 60477
+5 53202
+5 88039
+5 55803
+4 8844
+4 3278
+5 71953
+5 98466
+5 83622
+5 77904
+5 66801
+5 39110
+5 54981
+5 46201
+5 40207
+5 83702
+5 48202
+5 80501
+5 29372
+5 28785
+5 72834
+5 63101
+4 2138
+5 43402
+5 43085
+4 6098
+5 20814
+5 88101
+5 84057
+5 38117
+4 7626
+4 2101
+5 87015
+5 46038
+5 28277
+5 99504
+5 29690
+5 26508
+5 97338
+4 2919
+5 18940
+5 10001
+5 48445
+5 40391
+5 46260
+5 72401
+5 81401
+5 96744
+4 3246
+5 70785
+5 50021
+5 45429
+4 7020
+5 25625
+4 5672
+5 53215
+5 54143
+4 4021
+4 1101
+5 14204
+5 85206
+5 19341
+4 7102
+

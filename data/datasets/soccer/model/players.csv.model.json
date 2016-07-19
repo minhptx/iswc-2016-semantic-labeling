@@ -1,0 +1,378 @@
+{
+    "id": "players.csv",
+    "name": "players.csv",
+    "description": null,
+    "sourceColumns": [
+        {
+            "id": "HN328157",
+            "hNodeId": "HN328157",
+            "columnName": "lastName"
+        },
+        {
+            "id": "HN328158",
+            "hNodeId": "HN328158",
+            "columnName": "leagueShortname"
+        },
+        {
+            "id": "HN328159",
+            "hNodeId": "HN328159",
+            "columnName": "fullName"
+        },
+        {
+            "id": "HN328156",
+            "hNodeId": "HN328156",
+            "columnName": "firstName"
+        },
+        {
+            "id": "HN328160",
+            "hNodeId": "HN328160",
+            "columnName": "leagueName"
+        },
+        {
+            "id": "HN328154",
+            "hNodeId": "HN328154",
+            "columnName": "displayName"
+        },
+        {
+            "id": "HN328162",
+            "hNodeId": "HN328162",
+            "columnName": "shortName"
+        }
+    ],
+    "mappingToSourceColumns": [
+        {
+            "id": "HN328157",
+            "sourceColumnId": "HN328157"
+        },
+        {
+            "id": "HN328158",
+            "sourceColumnId": "HN328158"
+        },
+        {
+            "id": "HN328159",
+            "sourceColumnId": "HN328159"
+        },
+        {
+            "id": "HN328156",
+            "sourceColumnId": "HN328156"
+        },
+        {
+            "id": "HN328160",
+            "sourceColumnId": "HN328160"
+        },
+        {
+            "id": "HN328154",
+            "sourceColumnId": "HN328154"
+        },
+        {
+            "id": "HN328162",
+            "sourceColumnId": "HN328162"
+        }
+    ],
+    "graph": {
+        "nodes": [
+            {
+                "id": "http://schema.org/Player1",
+                "label": {
+                    "uri": "http://schema.org/Player"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/SportsClub1",
+                "label": {
+                    "uri": "http://schema.org/SportsClub"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/League1",
+                "label": {
+                    "uri": "http://schema.org/League"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "HN328157",
+                "label": {
+                    "uri": "HN328157"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN328157",
+                "columnName": "lastName",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN328157",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/familyName"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN328158",
+                "label": {
+                    "uri": "HN328158"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN328158",
+                "columnName": "leagueShortname",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN328158",
+                        "domain": {
+                            "uri": "http://schema.org/League"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/name"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN328159",
+                "label": {
+                    "uri": "HN328159"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN328159",
+                "columnName": "fullName",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN328159",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/name"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN328156",
+                "label": {
+                    "uri": "HN328156"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN328156",
+                "columnName": "firstName",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN328156",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/givenName"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN328160",
+                "label": {
+                    "uri": "HN328160"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN328160",
+                "columnName": "leagueName",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN328160",
+                        "domain": {
+                            "uri": "http://schema.org/League"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/name"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN328154",
+                "label": {
+                    "uri": "HN328154"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN328154",
+                "columnName": "displayName",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN328154",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/name"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN328162",
+                "label": {
+                    "uri": "HN328162"
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN328162",
+                "columnName": "shortName",
+                "rdfLiteralType": null,
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN328162",
+                        "domain": {
+                            "uri": "http://schema.org/Player"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/name"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            }
+        ],
+        "links": [
+            {
+                "id": "http://schema.org/Player1---http://schema.org/inClub---http://schema.org/SportsClub1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/inClub"
+                },
+                "objectPropertyType": "None",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/SportsClub1---http://schema.org/inLeague---http://schema.org/League1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/inLeague"
+                },
+                "objectPropertyType": "None",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/familyName---HN328157",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/familyName"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/League1---http://schema.org/name---HN328158",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/name"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/name---HN328159",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/name"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/givenName---HN328156",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/givenName"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/League1---http://schema.org/name---HN328160",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/name"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/name---HN328154",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/name"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.org/Player1---http://schema.org/alternateName---HN328162",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/alternateName"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            }
+        ]
+    }
+}
