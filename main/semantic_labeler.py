@@ -122,7 +122,7 @@ class SemanticLabeler:
 
                             if not found and semantic_types[0][0] < threshold:
                                 rank_score = 1
-                            file_write.write(
+                            # file_write.write(
                                 column.name + "\t" + column.semantic_type + "\t" + str(semantic_types) + "\n")
                             file_write.write(str(rank_score) + "\n")
                             rank_score_map[size][threshold] += rank_score
