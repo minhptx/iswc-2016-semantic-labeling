@@ -1,3 +1,5 @@
+from elasticsearch.helpers import scan, bulk
+
 from lib.utils import get_index_name
 
 __author__ = "minh"
@@ -48,7 +50,7 @@ class Indexer:
         body = column.to_json()
         body['source'] = source_name
         self.es.index(index=get_index_name(index_config), doc_type=source_name,
-                          body=body)
+                      body=body)
 
     def index_source(self, source, index_config):
         # self.es.indices.put_mapping(index=get_index_name(index_config), doc_type=source.index_name, body={
@@ -70,8 +72,16 @@ class Indexer:
             if column.semantic_type:
                 self.index_column(column, source.index_name, index_config)
 
-    def delete_column(self, index_config):
-        if self.es.indices.exists(get_index_name(index_config)):
-            self.es.delete(index=get_index_name(index_config))
-            return True
-        return False
+    def delete_column(self, attr_name, source_name, index_config):
+        bulk_deletes = []
+        for result in scan(self.es, query={
+            "query": {
+                "match": {
+                    "name": attr_name,
+                }
+            }
+        }, index=get_index_name(index_config), doc_type=source_name, _source=False,
+                           track_scores=False, scroll='5m'):
+            result['_op_type'] = 'delete'
+            bulk_deletes.append(result)
+        bulk(self.es, bulk_deletes)

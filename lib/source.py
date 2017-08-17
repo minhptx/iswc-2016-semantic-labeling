@@ -43,8 +43,11 @@ class Source:
 
     def write_csv_file(self, file_path):
         with open(file_path, "w") as csv_file:
+            max_length = max([len(column.value_list) for column in self.column_map.values()])
             writer = csv.writer(csv_file, quotechar='"', quoting=csv.QUOTE_ALL)
-            for i in range(500):
+            writer.writerow([column.name for column in self.column_map.values()])
+            writer.writerow([column.semantic_type for column in self.column_map.values()])
+            for i in range(max_length):
                 output_list = []
                 for column in self.column_map.values():
                     try:
@@ -60,20 +63,20 @@ class Source:
                 self.column_map[header].add_value(element)
 
     def read_data_from_csv(self, file_path):
-        with open(file_path) as csv_file:
+        with open(file_path, 'rU') as csv_file:
             reader = csv.DictReader(csv_file)
             headers = reader.fieldnames
-            for header in headers:
+            for idx, header in enumerate(headers):
+                idx = str(idx)
                 if header:
                     header = header.replace(" ", "")
-                    self.column_map[header] = Column(header, file_path)
+                    self.column_map[idx] = Column(idx, file_path)
                     #for weather 2 data
-                    # self.column_map[header].semantic_type = header
-
+                    self.column_map[idx].semantic_type = header
             for row in reader:
                 for header in row.iterkeys():
                     if header:
-                        self.column_map[header.replace(" ", "")].add_value(row[header])
+                        self.column_map[str(headers.index(header))].add_value(row[header])
 
     def read_data_from_wc_csv(self, file_path):
         with open(file_path) as csv_file:
@@ -144,7 +147,7 @@ class Source:
 
     def read_data_from_text_file(self, file_path):
         with open(file_path, 'r') as f:
-            num_types = int(f.readline())
+            num_types = int(f.readline().strip())
             f.readline()
             for num_type in range(num_types):
                 semantic_type = f.readline().strip()

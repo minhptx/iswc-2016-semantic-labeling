@@ -30,13 +30,13 @@ feature_tests_map = {ANOVA_TEST: anova_test, KS_TEST: kolmogorov_smirnov_test, J
                      MW_NUM_TEST: mann_whitney_u_test, WORD2VEC_TEST: word2vec_cosine_test, MW_TEST: mann_whitney_test,
                      CHAR_LEN_TEST: char_len_test, STR_LEN_TEST: len_test}
 
-data_tests_map = {"textual_list": [JACCARD_TEST], "values": [ABBR_TEST], 'word2vec': [WORD2VEC_TEST],
-                  'numeric_list': [KS_TEST, COVER_TEST, W_TEST], "char_lengths": [CHAR_LEN_TEST],
+data_tests_map = {"values": [ABBR_TEST], 'word2vec': [WORD2VEC_TEST],
+                  'numeric_list': [KS_TEST, COVER_TEST, MW_NUM_TEST, JACCARD_TEST], "char_lengths": [CHAR_LEN_TEST],
                   "word_lengths": [STR_LEN_TEST], "name": [LBL_TEST], "histogram": [MW_TEST]}
 
-feature_list = [LBL_TEST, COVER_TEST, JACCARD_TEST, TF_IDF_TEST, KS_TEST, MW_TEST]
-text_list = [ABBR_TEST, JACCARD_TEST, TF_IDF_TEST]
-number_list = [COVER_TEST, KS_TEST, W_TEST]
+feature_list = [LBL_TEST, COVER_TEST, JACCARD_TEST, TF_IDF_TEST, MW_NUM_TEST]
+text_list = [ABBR_TEST, TF_IDF_TEST]
+number_list = [COVER_TEST, JACCARD_TEST, MW_NUM_TEST]
 
 tree_feature_list = []
 for feature in feature_list:

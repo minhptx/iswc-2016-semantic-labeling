@@ -1,8 +1,8 @@
 import locale
+import os
 import re
 from collections import defaultdict
 
-from numpy import percentile, array
 from numpy.random import choice
 
 from lib.utils import split_number_text, not_allowed_chars, get_distribution
@@ -28,6 +28,12 @@ class Column:
         self.word_lengths = []
         self.char_lengths = []
         self.histogram_list = []
+
+    def write_to_data_file(self):
+        if not os.path.isdir("data/transform_data/%s" % self.semantic_type):
+            os.makedirs("data/transform_data/%s" % self.semantic_type)
+        with open("data/transform_data/%s/%s" % (self.semantic_type, os.path.basename(self.source_name)), "w") as f:
+            f.write("\n".join(self.value_list))
 
     def add_value(self, value):
         if not value:
@@ -62,35 +68,23 @@ class Column:
             self.textual_list.append(text)
 
         if numbers:
-            self.numeric_list.append(max([locale.atof(v[0]) for v in numbers]))
+            self.numeric_list.extend([locale.atof(num[0]) for num in numbers])
 
     def prepare_data(self):
-        self.word2vec = []
-        # for word in self.word_set:
-        #     try:
-        #         self.word2vec.append(np.asarray(word2vec[word]))
-        #     except:
-        #         continue
-        # self.word2vec = np.mean(np.asarray(self.word2vec), axis=0).tolist()
-        if not isinstance(self.word2vec, list):
-            self.word2vec = []
         if not self.is_prepared:
             sample_size = min(200, len(self.numeric_list))
             # print self.value_list
-            if percentile(array(self.word_lengths), 25) != percentile(array(self.word_lengths), 75):
-                self.word_lengths = []
-            if percentile(array(self.char_lengths), 25) != percentile(array(self.char_lengths), 75):
-                self.char_lengths = []
-
+            # if percentile(array(self.word_lengths), 25) != percentile(array(self.word_lengths), 75):
+            #     self.word_lengths = []
+            # if percentile(array(self.char_lengths), 25) != percentile(array(self.char_lengths), 75):
+            #     self.char_lengths = []
+            if self.numeric_list:
+                self.sample_list = choice(self.numeric_list, sample_size).tolist()
             self.histogram_list = get_distribution(self.value_list)
             if len(self.histogram_list) > 20:
                 self.histogram_list = []
             # print self.histogram_list
 
-            if self.numeric_list:
-                self.sample_list = choice(self.numeric_list, sample_size).tolist()
-            else:
-                self.sample_list = self.numeric_list
             self.is_prepared = True
 
     def to_json(self):

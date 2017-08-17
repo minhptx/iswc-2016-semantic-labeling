@@ -1,0 +1,22 @@
+Dataset: new_weather
+1	humid	[(0.84, ['humid']), (0.83, ['temp']), (0.67, ['dewp']), (0.16, ['wspeed', 'wgust'])]
+1.0
+0	dewp	[(0.7, ['dewp']), (0.65, ['humid']), (0.62, ['temp']), (0.16, ['wspeed', 'wgust'])]
+1.0
+3	wgust	[(0.78, ['wspeed']), (0.7, ['wgust']), (0.2, ['dewp']), (0.16, ['humid', 'temp'])]
+0
+2	wspeed	[(0.85, ['wgust']), (0.83, ['wspeed']), (0.25, ['dewp']), (0.17, ['humid']), (0.16, ['temp'])]
+0
+4	temp	[(0.7, ['humid', 'temp']), (0.67, ['dewp']), (0.16, ['wspeed', 'wgust'])]
+1.0
+1	wgust	[(0.85, ['wspeed']), (0.7, ['wgust']), (0.16, ['dewp', 'humid', 'temp'])]
+0
+0	wspeed	[(0.83, ['wspeed']), (0.78, ['wgust']), (0.16, ['dewp', 'humid', 'temp'])]
+1.0
+3	humid	[(0.84, ['humid']), (0.7, ['temp']), (0.65, ['dewp']), (0.17, ['wspeed']), (0.16, ['wgust'])]
+1.0
+2	temp	[(0.83, ['humid']), (0.7, ['temp']), (0.62, ['dewp']), (0.16, ['wspeed', 'wgust'])]
+0
+4	dewp	[(0.7, ['dewp']), (0.67, ['humid', 'temp']), (0.25, ['wspeed']), (0.2, ['wgust'])]
+1.0
+Size: 1 F-measure: 0.6 Time: 21.3483240604 Count: 10

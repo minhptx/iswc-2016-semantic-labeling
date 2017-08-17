@@ -15,6 +15,7 @@ def kolmogorov_smirnov_test(train_examples, test_examples, num1, num2):
 
 def welch_test(train_examples, test_examples, num1, num2):
     if len(train_examples) > 1 and len(test_examples) > 1:
+        print(train_examples, test_examples)
         result = ttest_ind(train_examples, test_examples, False)[1]
         return balance_result(num1, num2, True, result)
     return 0
@@ -46,12 +47,16 @@ def anova_test(train_examples, test_examples):
 
 def coverage_test(train_examples, test_examples, num1, num2):
     if len(train_examples) > 1 and len(test_examples) > 1:
-        max1 = percentile(train_examples, 75)
-        min1 = percentile(train_examples, 25)
-        max2 = percentile(test_examples, 75)
-        min2 = percentile(test_examples, 25)
+        max1 = percentile(train_examples, 100)
+        min1 = percentile(train_examples, 0)
+        max2 = percentile(test_examples, 100)
+        min2 = percentile(test_examples, 0)
         max3 = max(max1, max2)
         min3 = min(min1, min2)
+        print "max1", max1
+        print "min1", min1
+        print "max2", max2
+        print "min2", min2
         if min2 > max1 or min1 > max2:
             return 0
         elif max3 == min3:

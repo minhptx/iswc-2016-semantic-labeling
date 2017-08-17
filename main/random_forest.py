@@ -2,8 +2,7 @@ import os
 
 import numpy as np
 import pandas as pd
-from costcla import CostSensitiveRandomForestClassifier
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.externals import joblib
 from sklearn.linear_model import LogisticRegression
 
 from lib import searcher
@@ -12,10 +11,10 @@ from tests.integrated import feature_list, tree_feature_list
 
 
 class MyRandomForest:
-    def __init__(self, data_sets, dataset_map):
+    def __init__(self, data_sets=None, dataset_map=None, model_path=None):
         self.data_sets = data_sets
         self.dataset_map = dataset_map
-        self.model_path = os.path.join("data/train_models", "museum_column_1_%s.pickle")
+        self.model_path = model_path
         self.model = None
         self.feature_selector = None
 
@@ -43,33 +42,28 @@ class MyRandomForest:
 
     def train(self, train_sizes):
         if os.path.exists(self.model_path):
-            train_df = self.load()
+            print "Loading ..."
+            self.model = joblib.load("model/lr.pkl")
         else:
             train_df = self.generate_train_data(train_sizes)
             train_df = pd.DataFrame(train_df)
             train_df = train_df.replace([np.inf, -np.inf, np.nan], 0)
-        # self.model = LogisticRegression(n_estimators=200, combination="majority_voting")
-        self.model = LogisticRegression(class_weight="balanced")
-        # print train_df
-        # sample_weight = train_df['label'].apply(lambda x: 15 if x else 1)
-        # print sample_weight
-        if is_tree_based:
-            self.model.fit(train_df[tree_feature_list], train_df['label'])
-        else:
-            # self.model.fit(train_df[feature_list], train_df['label'])
-            self.model.fit(train_df[feature_list], train_df['label'])
+            # self.model = LogisticRegression(n_estimators=200, combination="majority_voting")
+            self.model = LogisticRegression(class_weight="balanced")
+            # print train_df
+            # sample_weight = train_df['label'].apply(lambda x: 15 if x else 1)
+            # print sample_weight
+            if is_tree_based:
+                self.model.fit(train_df[tree_feature_list], train_df['label'])
+            else:
+                # self.model.fit(train_df[feature_list], train_df['label'])
+                self.model.fit(train_df[feature_list], train_df['label'])
 
-            # train_df[feature_list + ["label"]].to_csv("train.csv", mode='w', header=True)
-            # cost = len(train_df[train_df['label'] == False]) / len(train_df[train_df['label'] == True])
-            # self.model.fit(train_df[feature_list].as_matrix(), train_df['label'].as_matrix(),
-            #                np.tile(np.array([1, cost, 0, 0]), (train_df.shape[0], 1)))
-            print self.model.coef_
-
-    def save(self, df):
-        df.to_pickle(self.model_path)
-
-    def load(self):
-        return pd.read_pickle(self.model_path)
+                # train_df[feature_list + ["label"]].to_csv("train.csv", mode='w', header=True)
+                # cost = len(train_df[train_df['label'] == False]) / len(train_df[train_df['label'] == True])
+                # self.model.fit(train_df[feature_list].as_matrix(), train_df['label'].as_matrix(),
+                #                np.tile(np.array([1, cost, 0, 0]), (train_df.shape[0], 1)))
+            joblib.dump(self.model, self.model_path)
 
     def predict(self, test_data, true_type):
         test_df = pd.DataFrame(test_data)
@@ -80,7 +74,7 @@ class MyRandomForest:
             test_df['prob'] = [x[1] for x in self.model.predict_proba(test_df[feature_list].as_matrix())]
         # test_df['prediction'] = [1 if x else 0 for x in self.model.predict(test_df[feature_list])]
         test_df['truth'] = test_df['name'].map(lambda row: row.split("!")[0] == true_type)
-        test_df = test_df.sort(["prob"], ascending=[False]).head(4)
+        test_df = test_df.sort_values(by=["prob"], ascending=[False])
 
         if os.path.exists("debug.csv"):
             test_df.to_csv("debug.csv", mode='a', header=False)
