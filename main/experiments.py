@@ -32,7 +32,7 @@ def run_experiments():
 
     # sizes = random.sample(range(1, 12), 2)
 
-    semantic_labeler.train_random_forest([1, 2, 3, 4, 5], ["soccer"])
+    semantic_labeler.train_random_forest([1, 5, 9], ["soccer"])
     # semantic_labeler.train_random_forest([1], ["museum2"])
     #
     # semantic_labeler.test_semantic_types("museum2", [14])
