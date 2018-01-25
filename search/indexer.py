@@ -1,6 +1,6 @@
+from lib.utils import get_index_name
 from elasticsearch.helpers import scan, bulk
 
-from lib.utils import get_index_name
 
 __author__ = "minh"
 
@@ -49,24 +49,24 @@ class Indexer:
     def index_column(self, column, source_name, index_config):
         body = column.to_json()
         body['source'] = source_name
-        self.es.index(index=get_index_name(index_config), doc_type=source_name,
-                      body=body)
+        self.es.index(index=get_index_name(index_config), doc_type="service",
+                          body=body)
 
     def index_source(self, source, index_config):
-        # self.es.indices.put_mapping(index=get_index_name(index_config), doc_type=source.index_name, body={
-        #     source.index_name: {
-        #         "properties": {
-        #             "whitespace_textual": {
-        #                 "type": "string",
-        #                 "analyzer": "whitespace_text"
-        #             },
-        #             "number_textual": {
-        #                 "type": "string",
-        #                 "analyzer": "number_text"
-        #             }
-        #         }
-        #     }
-        # })
+        self.es.indices.put_mapping(index=get_index_name(index_config), doc_type="service", body={
+            source.index_name: {
+                "properties": {
+                    "whitespace_textual": {
+                        "type": "string",
+                        "analyzer": "whitespace_text"
+                    },
+                    "number_textual": {
+                        "type": "string",
+                        "analyzer": "number_text"
+                    }
+                }
+            }
+        })
 
         for column in source.column_map.values():
             if column.semantic_type:
@@ -80,7 +80,7 @@ class Indexer:
                     "name": attr_name,
                 }
             }
-        }, index=get_index_name(index_config), doc_type=source_name, _source=False,
+        }, index=get_index_name(index_config), doc_type="service", _source=False,
                            track_scores=False, scroll='5m'):
             result['_op_type'] = 'delete'
             bulk_deletes.append(result)
