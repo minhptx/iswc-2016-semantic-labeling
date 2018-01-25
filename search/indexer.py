@@ -9,42 +9,42 @@ class Indexer:
     def __init__(self, es):
         self.es = es
 
-    def init_analyzers(self, index_config):
-        self.es.indices.create(index=get_index_name(index_config), body={
-            "settings": {
-                "analysis": {
-                    "analyzer": {
-                        "textual": {
-                            "filter": [
-                                "standard",
-                                "lowercase",
-                                "stop",
-                            ],
-                            "type": "custom",
-                            "tokenizer": "standard"
-                        },
-                        "number_text": {
-                            "filter": [
-                                "lowercase",
-                                "word_delimiter",
-                                "stop",
-                            ],
-                            "type": "custom",
-                            "tokenizer": "standard"
-                        },
-                        "whitespace_text": {
-                            "filter": [
-                                "lowercase",
-                                "stop",
-                                "kstem"
-                            ],
-                            "type": "custom",
-                            "tokenizer": "whitespace"
-                        }
-                    }
-                }
-            }
-        })
+    # def init_analyzers(self, index_config):
+    #     self.es.indices.create(index=get_index_name(index_config), body={
+    #         "settings": {
+    #             "analysis": {
+    #                 "analyzer": {
+    #                     "textual": {
+    #                         "filter": [
+    #                             "standard",
+    #                             "lowercase",
+    #                             "stop",
+    #                         ],
+    #                         "type": "custom",
+    #                         "tokenizer": "standard"
+    #                     },
+    #                     "number_text": {
+    #                         "filter": [
+    #                             "lowercase",
+    #                             "word_delimiter",
+    #                             "stop",
+    #                         ],
+    #                         "type": "custom",
+    #                         "tokenizer": "standard"
+    #                     },
+    #                     "whitespace_text": {
+    #                         "filter": [
+    #                             "lowercase",
+    #                             "stop",
+    #                             "kstem"
+    #                         ],
+    #                         "type": "custom",
+    #                         "tokenizer": "whitespace"
+    #                     }
+    #                 }
+    #             }
+    #         }
+    #     })
 
     def index_column(self, column, source_name, index_config):
         body = column.to_json()
@@ -53,20 +53,20 @@ class Indexer:
                           body=body)
 
     def index_source(self, source, index_config):
-        self.es.indices.put_mapping(index=get_index_name(index_config), doc_type="service", body={
-            source.index_name: {
-                "properties": {
-                    "whitespace_textual": {
-                        "type": "string",
-                        "analyzer": "whitespace_text"
-                    },
-                    "number_textual": {
-                        "type": "string",
-                        "analyzer": "number_text"
-                    }
-                }
-            }
-        })
+        # self.es.indices.put_mapping(index=get_index_name(index_config), doc_type="service", body={
+        #     source.index_name: {
+        #         "properties": {
+        #             "whitespace_textual": {
+        #                 "type": "string",
+        #                 "analyzer": "textual"
+        #             },
+        #             "number_textual": {
+        #                 "type": "string",
+        #                 "analyzer": "number_text"
+        #             }
+        #         }
+        #     }
+        # })
 
         for column in source.column_map.values():
             if column.semantic_type:
