@@ -184,8 +184,8 @@ class SemanticLabeler:
                 self.file_class_map[row[0].replace(".tar.gz", ".csv")] = row[1]
 
     def test_semantic_types_from_2_sets(self, train_set, test_set):
-        self.read_class_type_from_csv("data/datasets/%s/classes.csv" % test_set)
-        print self.file_class_map.keys()
+        # self.read_class_type_from_csv("data/datasets/%s/classes.csv" % test_set)
+        # print self.file_class_map.keys()
         rank_score_map = defaultdict(lambda: 0)
         count_map = defaultdict(lambda: 0)
 
@@ -193,20 +193,24 @@ class SemanticLabeler:
         train_index_config = {'name': train_set}
 
         for idx, source_name in enumerate(self.dataset_map[test_set]):
-            if source_name not in self.file_class_map:
-                continue
-            train_examples_map = searcher.search_types_data(train_index_config, [self.file_class_map[source_name]])
+            # if source_name not in self.file_class_map:
+            #     continue
+            train_examples_map = searcher.search_types_data(train_index_config,
+                                                            [source_name])
 
             source = self.dataset_map[test_set][source_name]
 
             column_result_map = {}
             for column in source.column_map.values():
 
-                if not column.semantic_type or not column.value_list or "ontology" not in column.semantic_type:
+                # if not column.semantic_type or not column.value_list or "ontology" not in column.semantic_type:
+                #     continue
+
+                if not column.semantic_type or not column.value_list:
                     continue
 
                 textual_train_map = searcher.search_similar_text_data(train_index_config, column.value_text,
-                                                                      [self.file_class_map[source_name]])
+                                                                      [source_name])
 
                 semantic_types = column.predict_type(train_examples_map, textual_train_map, self.random_forest)
 

@@ -52,7 +52,7 @@ def run_experiments():
     # semantic_labeler.test_semantic_types("soccer", [6])
     # semantic_labeler.test_semantic_types("weather", [2])
     # semantic_labeler.test_semantic_types("weather", xrange(1, 3))
-    # semantic_labeler.test_semantic_types_from_2_sets("dbpedia_full", "t2d")
+    semantic_labeler.test_semantic_types_from_2_sets("dbpedia_full", "t2d")
 
 
 if __name__ == "__main__":

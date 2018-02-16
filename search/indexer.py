@@ -9,7 +9,8 @@ class Indexer:
     def __init__(self, es):
         self.es = es
 
-    # def init_analyzers(self, index_config):
+    def init_analyzers(self, index_config):
+        pass
     #     self.es.indices.create(index=get_index_name(index_config), body={
     #         "settings": {
     #             "analysis": {
