@@ -53,10 +53,10 @@ def coverage_test(train_examples, test_examples, num1, num2):
         min2 = percentile(test_examples, 0)
         max3 = max(max1, max2)
         min3 = min(min1, min2)
-        print "max1", max1
-        print "min1", min1
-        print "max2", max2
-        print "min2", min2
+        # print "max1", max1
+        # print "min1", min1
+        # print "max2", max2
+        # print "min2", min2
         if min2 > max1 or min1 > max2:
             return 0
         elif max3 == min3:

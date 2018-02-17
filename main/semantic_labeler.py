@@ -191,61 +191,59 @@ class SemanticLabeler:
 
         source_result_map = {}
         train_index_config = {'name': train_set}
+        train_names = [source.index_name for source in self.dataset_map[train_set].values()]
 
         for idx, source_name in enumerate(self.dataset_map[test_set]):
             # if source_name not in self.file_class_map:
             #     continue
             train_examples_map = searcher.search_types_data(train_index_config,
-                                                            [source_name])
+                                                            train_names)
 
             source = self.dataset_map[test_set][source_name]
 
             column_result_map = {}
             for column in source.column_map.values():
-
                 # if not column.semantic_type or not column.value_list or "ontology" not in column.semantic_type:
                 #     continue
-
                 if not column.semantic_type or not column.value_list:
                     continue
 
                 textual_train_map = searcher.search_similar_text_data(train_index_config, column.value_text,
-                                                                      [source_name])
+                                                                      train_names)
 
                 semantic_types = column.predict_type(train_examples_map, textual_train_map, self.random_forest)
-
+                column_result_map[column.name] = semantic_types
                 print column.name
 
                 file_write.write(
                     column.name + "\t" + column.semantic_type + "\t" + str(semantic_types) + "\n")
 
-                for threshold in [0.1, 0.15, 0.2, 0.25, 0.5]:
-                    rank = 0
+                for threshold in [0.0, 0.1, 0.15, 0.2, 0.25, 0.5]:
                     found = False
+                    rank = 1
                     rank_score = 0
-                    for prediction in semantic_types:
+                    for prediction in semantic_types[:1]:
                         if column.semantic_type in prediction[1]:
-                            if prediction[0][1] >= threshold:
-                                rank_score = 1.0 / (rank + 1)
+                            if prediction[0] > threshold and prediction[0] != 0:
+                                rank_score = 1.0 / rank
                             found = True
-
-                        if not found and prediction[0][0] != 0:
+                            break
+                        if prediction[0] != 0:
                             rank += len(prediction[1])
 
-                    if not found:
-                        if semantic_types[0][0][1] < threshold:
-                            rank_score = 1
+                    if not found and semantic_types[0][0] < threshold:
+                        rank_score = 1
                     file_write.write(str(rank_score) + "\n")
                     rank_score_map[threshold] += rank_score
                     count_map[threshold] += 1
 
             source_result_map[source_name] = column_result_map
 
-        for threshold in [0.1, 0.15, 0.2, 0.25, 0.5]:
+        for threshold in [0.0, 0.1, 0.15, 0.2, 0.25, 0.5]:
             file_write.write(
                 " MRR: " + str(
                     rank_score_map[threshold] * 1.0 / count_map[threshold]) + " Count: " + str(
-                    count_map[threshold]) + "\n")
+                    count_map[threshold]) + " threshold=" + str(threshold) + "\n")
         return source_result_map
 
     def write_data_for_transform(self, name):

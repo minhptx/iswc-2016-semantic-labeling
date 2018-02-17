@@ -74,7 +74,7 @@ class MyRandomForest:
             test_df['prob'] = [x[1] for x in self.model.predict_proba(test_df[feature_list].as_matrix())]
         # test_df['prediction'] = [1 if x else 0 for x in self.model.predict(test_df[feature_list])]
         test_df['truth'] = test_df['name'].map(lambda row: row.split("!")[0] == true_type)
-        test_df = test_df.sort(["prob"], ascending=[False])
+        test_df = test_df.sort_values(["prob"], ascending=[False])
 
         if os.path.exists("debug.csv"):
             test_df.to_csv("debug.csv", mode='a', header=False)
