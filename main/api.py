@@ -1,20 +1,19 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import os, logging
-
+import logging
+import os
+import sys
 import ujson
 
-import sys
-from typing import Dict, Tuple, List, Set, Union, Optional
-
 from elasticsearch import Elasticsearch
+
 from main.semantic_labeler import SemanticLabeler
 
 """API for semantic labeling, a dataset is a set of sources"""
 
 
 def get_logger(name):
-    logger = logging.getLogger()
+    logger = logging.getLogger(name)
     logger.setLevel(logging.INFO)
     logger.propagate = False
 
