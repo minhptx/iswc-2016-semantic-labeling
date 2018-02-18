@@ -1,3 +1,5 @@
+import logging
+
 from numpy import percentile
 from scipy.stats import mannwhitneyu, f_oneway, ks_2samp, ttest_ind
 
@@ -30,10 +32,14 @@ def mann_whitney_test(train_examples, test_examples, num1, num2):
 
 
 def mann_whitney_u_test(train_examples, test_examples, num1, num2):
-    if len(train_examples) > 1 and len(test_examples) > 1:
-        result = mannwhitneyu(train_examples, test_examples)[1]
-        return balance_result(num1, num2, True, result)
-    return 0
+    try:
+        if len(train_examples) > 1 and len(test_examples) > 1:
+            result = mannwhitneyu(train_examples, test_examples)[1]
+            return balance_result(num1, num2, True, result)
+        return 0
+    except ValueError as e:
+        logging.warn("IGNORE EXCEPTION: %s", str(e))
+        return 0
 
 
 def anova_test(train_examples, test_examples):

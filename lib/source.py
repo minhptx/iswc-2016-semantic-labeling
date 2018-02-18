@@ -1,5 +1,6 @@
 import csv
 import json
+import logging
 import re
 from xml.etree import ElementTree
 
@@ -38,7 +39,8 @@ class Source:
         _type = semantic_object["type"]["uri"].split("/")[-1]
         try:
             self.column_map[name.replace(" ", "")].semantic_type = domain + "---" + _type
-        except:
+        except Exception:
+            logging.exception("Hit exception when set_semantic_type")
             return
 
     def write_csv_file(self, file_path):
@@ -70,13 +72,13 @@ class Source:
                 idx = str(idx)
                 if header:
                     header = header.replace(" ", "")
-                    self.column_map[idx] = Column(idx, file_path)
+                    self.column_map[header] = Column(header, file_path)
                     #for weather 2 data
-                    self.column_map[idx].semantic_type = header
+                    self.column_map[header].semantic_type = header
             for row in reader:
                 for header in row.iterkeys():
                     if header:
-                        self.column_map[str(headers.index(header))].add_value(row[header])
+                        self.column_map[header].add_value(row[header])
 
     def read_data_from_wc_csv(self, file_path):
         with open(file_path) as csv_file:

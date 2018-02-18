@@ -68,7 +68,7 @@ def semantic_labeling(train_dataset, test_dataset, train_dataset2=None):
     semantic_labeler.read_data_sources(datasets)
     # index datasets that haven't been indexed before
 
-    not_indexed_datasets = [dataset for dataset in datasets if not is_indexed(dataset)]
+    not_indexed_datasets = list({dataset for dataset in datasets if not is_indexed(dataset)})
     if len(not_indexed_datasets) > 0:
         logger.info("Index not-indexed datasets: %s" % ",".join(not_indexed_datasets))
         semantic_labeler.train_semantic_types(not_indexed_datasets)
