@@ -4,7 +4,7 @@ Semantic Typing
 Automatically assign semantics to large data sets from heterogeneous sources based on their features using several Statistical and Machine Learning techniques.
 
 
-##Prerequisites
+## Prerequisites
 
 1. Elasticsearch
 2. Pyspark
