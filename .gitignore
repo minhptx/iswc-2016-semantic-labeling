@@ -3,3 +3,7 @@
 *.swp
 .idea
 .*
+!.gitignore
+debug.txt
+debug.csv
+output

@@ -7,4 +7,4 @@ shift 2
 docker run --rm --net=host \
     -v $DATASET_DIR:/home/data/datasets \
     -v $OUTPUT_DIR:/home/output \
-    -it isi/semantic-labeling python -m main.api $@
+    isi/semantic-labeling python -m main.api $@

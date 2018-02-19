@@ -18,14 +18,15 @@ ENV PATH /root/miniconda2/bin/:$PATH
 
 # setup projects
 RUN conda install -y numpy scipy
+RUN apt-get install -y unzip
 RUN cd home && \
-    wget https://github.com/minhptx/iswc-2016-semantic-labeling/archive/v0.1.tar.gz && \
-    mkdir semantic-labeling && \
-    tar -xf v0.1.tar.gz -C semantic-labeling --strip-components=1 && \
-    rm v0.1.tar.gz
+    wget https://github.com/minhptx/iswc-2016-semantic-labeling/archive/master.zip && \
+    unzip master.zip && \
+    mv iswc-2016-semantic-labeling-master semantic-labeling && \
+    rm master.zip
 
 RUN cd /home/semantic-labeling && \
-    pip install -r requirements.txt && \
+    pip install -r requirements.txt
 
 RUN mkdir /home/model && \
     mkdir -p /home/data/datasets && \
