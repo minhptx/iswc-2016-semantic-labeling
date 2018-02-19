@@ -78,7 +78,7 @@ class Source:
             for row in reader:
                 for header in row.iterkeys():
                     if header:
-                        self.column_map[header].add_value(row[header])
+                        self.column_map[header.replace(" ", "")].add_value(row[header])
 
     def read_data_from_wc_csv(self, file_path):
         with open(file_path) as csv_file:

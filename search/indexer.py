@@ -1,3 +1,5 @@
+import logging
+
 from lib.utils import get_index_name
 from elasticsearch.helpers import scan, bulk
 
@@ -31,7 +33,10 @@ class Indexer:
 
         for column in source.column_map.values():
             if column.semantic_type:
-                self.index_column(column, source.index_name, index_config)
+                if len(column.value_list) > 0:
+                    self.index_column(column, source.index_name, index_config)
+                else:
+                    logging.warning("Indexer: IGNORE COLUMN %s because of empty values", column.name)
 
     def delete_column(self, attr_name, source_name, index_config):
         bulk_deletes = []
