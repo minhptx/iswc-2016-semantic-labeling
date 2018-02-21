@@ -123,7 +123,7 @@ class SemanticLabeler:
                         source.read_semantic_type_from_gold(os.path.join(model_folder_path, filename))
 
             self.dataset_map[folder_name] = source_map
-            print semantic_type_set
+            # print semantic_type_set
             print len(semantic_type_set)
             print attr_count
 
@@ -221,6 +221,7 @@ class SemanticLabeler:
                                                             train_names)
 
             source = self.dataset_map[test_set][source_name]
+            self.logger.info("Test source: %s", source_name)
 
             column_result_map = {}
             for column in source.column_map.values():
@@ -234,7 +235,7 @@ class SemanticLabeler:
 
                 semantic_types = column.predict_type(train_examples_map, textual_train_map, self.random_forest)
                 column_result_map[column.name] = semantic_types
-                print column.name
+                self.logger.info("    -> column: %s", column.name)
 
                 file_write.write(
                     column.name + "\t" + column.semantic_type + "\t" + str(semantic_types) + "\n")

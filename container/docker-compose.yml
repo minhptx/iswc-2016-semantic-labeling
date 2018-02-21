@@ -5,6 +5,8 @@ services:
         image: elasticsearch:5
         ports:
             - 9200:9200
+        environment:
+            ES_JAVA_OPTS: "-Xms6g -Xmx6g"
         volumes:
             - ./es_config:/usr/share/elasticsearch/config
 #            - ../docker-data/esdata:/usr/share/elasticsearch/data
