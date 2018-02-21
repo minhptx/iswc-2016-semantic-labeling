@@ -16,6 +16,8 @@ class Source:
         self.name = name
         self.index_name = re.sub(not_allowed_chars, "", self.name)
         self.column_map = {}
+        # NOTE: BINH adds this attribute
+        self.empty_val_columns = {}
 
     def save(self, index_config):
         indexer.index_source(source=self, index_config=index_config)
@@ -38,7 +40,10 @@ class Source:
         domain = semantic_object["domain"]["uri"].split("/")[-1]
         _type = semantic_object["type"]["uri"].split("/")[-1]
         try:
-            self.column_map[name.replace(" ", "")].semantic_type = domain + "---" + _type
+            if name.replace(" ", "") in self.column_map:
+                self.column_map[name.replace(" ", "")].semantic_type = domain + "---" + _type
+            else:
+                assert name.replace(" ", "") in self.empty_val_columns
         except Exception:
             logging.exception("Hit exception when set_semantic_type")
             return

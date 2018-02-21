@@ -91,6 +91,17 @@ class SemanticLabeler:
                 else:
                     source.read_data_from_text_file(file_path)
                 source_map[filename] = source
+
+                # NOTE: BINH delete empty columns here!!!, blindly follows the code in indexer:36
+                for key in list(source.column_map.keys()):
+                    column = source.column_map[key]
+                    if column.semantic_type:
+                        if len(column.value_list) == 0:
+                            del source.column_map[key]
+                            source.empty_val_columns[key] = column
+                            logging.warning("Indexer: IGNORE COLUMN `%s` in source `%s` because of empty values",
+                                            column.name, source.name)
+
                 for column in source.column_map.values():
                     semantic_type_set.add(column.semantic_type)
                 attr_count += len(source.column_map.values())
