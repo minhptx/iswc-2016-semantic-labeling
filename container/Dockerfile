@@ -19,6 +19,7 @@ ENV PATH /root/miniconda2/bin/:$PATH
 # setup projects
 RUN conda install -y numpy scipy
 RUN apt-get install -y unzip
+
 RUN cd home && \
     wget https://github.com/minhptx/iswc-2016-semantic-labeling/archive/master.zip && \
     unzip master.zip && \

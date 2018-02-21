@@ -43,10 +43,12 @@ class Column:
 
         if not value or value == "NULL":
             return
-        try:
-            value = value.encode("ascii", "ignore")
-        except:
-            value = value.decode("unicode_escape").encode("ascii", "ignore")
+
+        value = value.decode('utf-8').encode('ascii', 'ignore')
+        # try:
+        #     value = value.encode("ascii", "ignore")
+        # except:
+        #     value = value.decode("unicode_escape").encode("ascii", "ignore")
 
         value = re.sub(not_allowed_chars, " ", value)
 

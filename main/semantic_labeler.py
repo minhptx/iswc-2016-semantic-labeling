@@ -1,5 +1,6 @@
 import csv
 import json
+import logging
 import os
 import re
 import time
@@ -10,12 +11,16 @@ from lib.column import Column
 from lib.source import Source
 from lib.utils import not_allowed_chars
 from main import file_write
+from main.logutil import get_logger
 from main.random_forest import MyRandomForest
 
 __author__ = 'alse'
 
 
 class SemanticLabeler:
+
+    logger = get_logger("SemanticLabeler", level=logging.DEBUG)
+
     def __init__(self):
         self.dataset_map = {}
         self.file_class_map = {}
@@ -57,18 +62,20 @@ class SemanticLabeler:
         semantic_type_set = set()
         attr_count = 0
         for folder_name in folder_paths:
+            self.logger.debug("Read dataset: %s", folder_name)
+
             folder_path = "data/datasets/%s" % folder_name
             source_map = OrderedDict()
             data_folder_path = os.path.join(folder_path, "data")
             model_folder_path = os.path.join(folder_path, "model")
 
-            for filename in os.listdir(data_folder_path):
+            for filename in sorted(os.listdir(data_folder_path)):
                 extension = os.path.splitext(filename)[1]
 
                 if ".DS" in filename:
                     continue
 
-                print filename
+                self.logger.debug("    -> read: %s", filename)
 
                 source = Source(os.path.splitext(filename)[0])
                 file_path = os.path.join(data_folder_path, filename)
@@ -115,12 +122,15 @@ class SemanticLabeler:
 
     def train_semantic_types(self, dataset_list):
         for name in dataset_list:
+            self.logger.debug("Indexing dataset %s", name)
+
             index_config = {'name': re.sub(not_allowed_chars, "!", name)}
             indexer.init_analyzers(index_config)
             source_map = self.dataset_map[name]
-            for idx in range(len(source_map.keys())):
-                source = source_map[source_map.keys()[idx]]
+            for idx, key in enumerate(source_map.keys()):
+                source = source_map[key]
                 source.save(index_config={'name': re.sub(not_allowed_chars, "!", name)})
+                self.logger.debug("    + finish index source: %s", key)
 
     def predict_semantic_type_for_column(self, column):
         train_examples_map = searcher.search_types_data("index_name", [])

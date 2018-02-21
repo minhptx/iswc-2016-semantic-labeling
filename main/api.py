@@ -7,26 +7,10 @@ import ujson
 
 from elasticsearch import Elasticsearch
 
+from main.logutil import get_logger
 from main.semantic_labeler import SemanticLabeler
 
 """API for semantic labeling, a dataset is a set of sources"""
-
-
-def get_logger(name):
-    logger = logging.getLogger(name)
-    logger.setLevel(logging.INFO)
-    logger.propagate = False
-
-    ch = logging.StreamHandler()
-    ch.setLevel(logging.INFO)
-    # create formatter and add it to the handlers
-    formatter = logging.Formatter(
-        '>>>>>> %(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    ch.setFormatter(formatter)
-    # add the handlers to the logger
-    logger.addHandler(ch)
-
-    return logger
 
 
 def is_indexed(dataset):
@@ -39,7 +23,7 @@ def is_indexed(dataset):
     return es.indices.exists(dataset.lower())
 
 
-def semantic_labeling(train_dataset, test_dataset, train_dataset2=None):
+def semantic_labeling(train_dataset, test_dataset, train_dataset2=None, evaluate_train_set=False, reuse_rf_model=True):
     """Doing semantic labeling, train on train_dataset, and test on test_dataset.
 
     train_dataset2 is optionally provided in case train_dataset, and test_dataset doesn't have overlapping semantic types
@@ -52,9 +36,11 @@ def semantic_labeling(train_dataset, test_dataset, train_dataset2=None):
     :param train_dataset: str
     :param test_dataset: str
     :param train_dataset2: Optional[str]
+    :param evaluate_train_set: bool
+    :param reuse_rf_model: bool
     :return:
     """
-    logger = get_logger("semantic-labeling-api")
+    logger = get_logger("semantic-labeling-api", format_str='>>>>>> %(asctime)s - %(levelname)s:%(name)s:%(module)s:%(lineno)d:   %(message)s')
 
     if train_dataset2 is None:
         train_dataset2 = train_dataset
@@ -73,8 +59,8 @@ def semantic_labeling(train_dataset, test_dataset, train_dataset2=None):
         logger.info("Index not-indexed datasets: %s" % ",".join(not_indexed_datasets))
         semantic_labeler.train_semantic_types(not_indexed_datasets)
 
-    # remove existing file
-    if os.path.exists("model/lr.pkl"):
+    # remove existing file if not reuse previous random forest model
+    if not reuse_rf_model and os.path.exists("model/lr.pkl"):
         os.remove("model/lr.pkl")
 
     # train the model
@@ -85,6 +71,10 @@ def semantic_labeling(train_dataset, test_dataset, train_dataset2=None):
     logger.info("Generate semantic typing using: trainset: %s, for testset: %s", train_dataset, test_dataset)
     result = semantic_labeler.test_semantic_types_from_2_sets(train_dataset2, test_dataset)
 
+    if evaluate_train_set:
+        logger.info("Generate semantic typing for trainset")
+        result = semantic_labeler.test_semantic_types_from_2_sets(train_dataset2, train_dataset2)
+
     if not os.path.exists("output"):
         os.mkdir("output")
     with open("output/%s_result.json" % test_dataset, "w") as f:
@@ -94,14 +84,20 @@ def semantic_labeling(train_dataset, test_dataset, train_dataset2=None):
 
 
 if __name__ == '__main__':
-    if len(sys.argv[1:]) == 3:
-        train_dataset, test_dataset, train_dataset2 = sys.argv[1:]
-    elif len(sys.argv[1:]) == 2:
-        train_dataset, test_dataset = sys.argv[1:]
-        train_dataset2 = None
-    else:
-        assert False, "Invalid arguments: %s" % sys.argv
+    import argparse
 
-    logger = get_logger("api-starter")
-    logger.info("Calling semantic labeling API with args: %s, %s, %s" % (train_dataset, test_dataset, train_dataset2))
-    semantic_labeling(train_dataset, test_dataset, train_dataset2)
+    parser = argparse.ArgumentParser('Semantic labeling API')
+    parser.add_argument('--train_dataset', type=str, help='trainset', required=True)
+    parser.add_argument('--test_dataset', type=str, help='testset', required=True)
+    parser.add_argument('--train_dataset2', type=str, default=None, help='default to train_dataset')
+    parser.add_argument('--evaluate_train_set', type=bool, default=False, help='default False')
+    parser.add_argument('--reuse_rf_model', type=bool, default=True, help='default True')
+
+    args = parser.parse_args()
+
+    if args.train_dataset2 is None:
+        args.train_dataset2 = args.train_dataset
+
+    logger = get_logger("api-starter", format_str='>>>>>> %(asctime)s - %(levelname)s:%(name)s:%(module)s:%(lineno)d:   %(message)s')
+    logger.info("Calling semantic labeling API with args: %s" % args)
+    semantic_labeling(args.train_dataset, args.test_dataset, args.train_dataset2, args.evaluate_train_set, args.reuse_rf_model)

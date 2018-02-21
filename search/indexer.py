@@ -36,7 +36,7 @@ class Indexer:
                 if len(column.value_list) > 0:
                     self.index_column(column, source.index_name, index_config)
                 else:
-                    logging.warning("Indexer: IGNORE COLUMN %s because of empty values", column.name)
+                    logging.warning("Indexer: IGNORE COLUMN `%s` in source `%s` because of empty values", column.name, source.name)
 
     def delete_column(self, attr_name, source_name, index_config):
         bulk_deletes = []
