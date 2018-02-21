@@ -91,8 +91,8 @@ if __name__ == '__main__':
     parser.add_argument('--train_dataset', type=str, help='trainset', required=True)
     parser.add_argument('--test_dataset', type=str, help='testset', required=True)
     parser.add_argument('--train_dataset2', type=str, default=None, help='default to train_dataset')
-    parser.add_argument('--evaluate_train_set', type=bool, default=False, help='default False')
-    parser.add_argument('--reuse_rf_model', type=bool, default=True, help='default True')
+    parser.add_argument('--evaluate_train_set', type=lambda x: x.lower() == "true", default=False, help='default False')
+    parser.add_argument('--reuse_rf_model', type=lambda x: x.lower() == "true", default=True, help='default True')
 
     args = parser.parse_args()
 
