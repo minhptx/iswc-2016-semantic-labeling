@@ -71,15 +71,16 @@ def semantic_labeling(train_dataset, test_dataset, train_dataset2=None, evaluate
     logger.info("Generate semantic typing using: trainset: %s, for testset: %s", train_dataset, test_dataset)
     result = semantic_labeler.test_semantic_types_from_2_sets(train_dataset2, test_dataset)
 
+    if not os.path.exists("output"):
+        os.mkdir("output")
+    with open("output/%s_result.json" % test_dataset, "w") as f:
+        ujson.dump(result, f)
+
     if evaluate_train_set:
         logger.info("Generate semantic typing for trainset")
         result = semantic_labeler.test_semantic_types_from_2_sets(train_dataset2, train_dataset2)
-
-    if not os.path.exists("output"):
-        os.mkdir("output")
-
-    with open("output/%s_result.json" % test_dataset, "w") as f:
-        ujson.dump(result, f)
+        with open("output/%s_result.json" % train_dataset2, "w") as f:
+            ujson.dump(result, f)
 
     return result
 
