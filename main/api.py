@@ -51,7 +51,7 @@ def semantic_labeling(train_dataset, test_dataset, train_dataset2=None, evaluate
     semantic_labeler = SemanticLabeler()
     # read data into memory
     logger.info("Read data into memory")
-    semantic_labeler.read_data_sources(datasets)
+    semantic_labeler.read_data_sources(list(set(datasets)))
     # index datasets that haven't been indexed before
 
     not_indexed_datasets = list({dataset for dataset in datasets if not is_indexed(dataset)})
@@ -77,6 +77,7 @@ def semantic_labeling(train_dataset, test_dataset, train_dataset2=None, evaluate
 
     if not os.path.exists("output"):
         os.mkdir("output")
+
     with open("output/%s_result.json" % test_dataset, "w") as f:
         ujson.dump(result, f)
 
