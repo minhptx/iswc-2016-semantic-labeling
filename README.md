@@ -13,11 +13,14 @@ Automatically assign semantics to large data sets from heterogeneous sources bas
 
 
 ## Run API
+1. Build docker image
 
-1. Start elasticsearch:
+```cd container; docker build .```
 
-```cd container; docker-compose up```
+2. Start elasticsearch:
 
-2. Calling API
+```docker-compose up```
+
+3. Calling API
 
 ```bin/semantic_labeling.sh <train_dataset> <test_dataset> <train_dataset2>```
