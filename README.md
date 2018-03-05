@@ -15,7 +15,7 @@ Automatically assign semantics to large data sets from heterogeneous sources bas
 ## Run API
 1. Build docker image
 
-```cd container; docker build .```
+```cd container; docker build -t isi/semantic-labeling .```
 
 2. Start elasticsearch:
 
