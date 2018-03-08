@@ -1,10 +1,11 @@
 import locale
 import os
 import re
+import logging
 from collections import defaultdict
 
 from numpy.random import choice
-
+from main.logutil import get_logger
 from lib.utils import split_number_text, not_allowed_chars, get_distribution
 from tests.integrated import get_test_results
 
@@ -13,6 +14,7 @@ __author__ = 'alse'
 
 class Column:
     def __init__(self, name, source_name=None):
+        self.logger = get_logger("column", format_str='>>>>>> %(asctime)s - %(levelname)s:%(name)s:%(module)s:%(lineno)d:   %(message)s')
         self.source_name = source_name
         self.name = name.replace("#", "")
         self.value_list = []
@@ -45,32 +47,44 @@ class Column:
             return
 
         value = value.decode('utf-8').encode('ascii', 'ignore')
-        # try:
-        #     value = value.encode("ascii", "ignore")
-        # except:
-        #     value = value.decode("unicode_escape").encode("ascii", "ignore")
 
-        value = re.sub(not_allowed_chars, " ", value)
+        try:
+            number = locale.atof(value.strip())
+            self.numeric_list.append(numeric_list)
+            self.logger.info("Numeric value", number)
 
-        self.word_set = self.word_set.union(set(value.split(" ")))
+        except Exception as e:
+            print(e)
+            self.textual_list.append(value)
+            self.textual_set.append(value)
+            self.logger.info("Text value", value)
 
-        if "full" in self.source_name and len(self.value_list) > 500:
-            return
-        self.value_list.append(value)
+        # # try:
+        # #     value = value.encode("ascii", "ignore")
+        # # except:
+        # #     value = value.decode("unicode_escape").encode("ascii", "ignore")
 
-        self.word_lengths.append(len(value.split(" ")))
-        self.char_lengths.append(len(value))
+        # value = re.sub(not_allowed_chars, " ", value)
 
-        numbers, text = split_number_text(value)
+        # self.word_set = self.word_set.union(set(value.split(" ")))
 
-        if text:
-            self.value_text += (" " + text)
+        # if "full" in self.source_name and len(self.value_list) > 500:
+        #     return
+        # self.value_list.append(value)
 
-            self.textual_set.add(text)
-            self.textual_list.append(text)
+        # self.word_lengths.append(len(value.split(" ")))
+        # self.char_lengths.append(len(value))
 
-        if numbers:
-            self.numeric_list.extend([locale.atof(num[0]) for num in numbers])
+        # numbers, text = split_number_text(value)
+
+        # if text:
+        #     self.value_text += (" " + text)
+
+        #     self.textual_set.add(text)
+        #     self.textual_list.append(text)
+
+        # if numbers:
+        #     self.numeric_list.extend([locale.atof(num[0]) for num in numbers])
 
     def prepare_data(self):
         if not self.is_prepared:
@@ -88,6 +102,7 @@ class Column:
             # print self.histogram_list
 
             self.is_prepared = True
+
 
     def to_json(self):
         self.prepare_data()

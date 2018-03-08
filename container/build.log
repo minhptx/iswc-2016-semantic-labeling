@@ -1,0 +1,40 @@
+Sending build context to Docker daemon 9.216 kB
+Step 1/13 : FROM ubuntu:14.04
+ ---> dc4491992653
+Step 2/13 : RUN apt-get update
+ ---> Using cache
+ ---> 7c1816fb93bd
+Step 3/13 : RUN apt-get install -y build-essential wget software-properties-common
+ ---> Using cache
+ ---> 8c14c37783cb
+Step 4/13 : RUN add-apt-repository ppa:webupd8team/java -y &&     apt-get update &&     echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections &&     echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections &&     apt-get install -y oracle-java8-installer
+ ---> Using cache
+ ---> 7f48b44029ac
+Step 5/13 : RUN wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh &&     bash Miniconda2-latest-Linux-x86_64.sh -b &&     rm Miniconda2-latest-Linux-x86_64.sh
+ ---> Using cache
+ ---> 28580ba3cac1
+Step 6/13 : ENV PATH /root/miniconda2/bin/:$PATH
+ ---> Using cache
+ ---> cd322f2411fe
+Step 7/13 : RUN conda install -y numpy scipy
+ ---> Using cache
+ ---> 86af706c55b2
+Step 8/13 : RUN apt-get install -y unzip
+ ---> Using cache
+ ---> 2b544b917ac6
+Step 9/13 : RUN cd home &&     wget https://github.com/minhptx/iswc-2016-semantic-labeling/archive/master.zip &&     unzip master.zip &&     mv iswc-2016-semantic-labeling-master semantic-labeling &&     rm master.zip
+ ---> Using cache
+ ---> 05c7e8110ac8
+Step 10/13 : RUN cd /home/semantic-labeling &&     pip install -r requirements.txt
+ ---> Using cache
+ ---> 86301eaa2754
+Step 11/13 : RUN mkdir /home/model &&     mkdir -p /home/data/datasets &&     mkdir /home/output
+ ---> Using cache
+ ---> b45065302ad4
+Step 12/13 : ENV PYTHONPATH /home/semantic-labeling:$PYTHONPATH
+ ---> Using cache
+ ---> 283d72e03c1d
+Step 13/13 : WORKDIR /home
+ ---> Using cache
+ ---> d8f4f1c433ec
+Successfully built d8f4f1c433ec
