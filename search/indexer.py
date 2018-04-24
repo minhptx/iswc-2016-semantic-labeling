@@ -20,16 +20,16 @@ class Indexer:
             body=body)
 
     def index_source(self, source, index_config):
-        self.es.indices.put_mapping(index=get_index_name(index_config), doc_type="service", body={
-            "service": {
-                "properties": {
-                    "source": {
-                        "type": "string",
-                        "index": "not_analyzed"
-                    }
-                }
-            }
-        })
+        # self.es.indices.put_mapping(index=get_index_name(index_config), doc_type="service", body={
+        #     "service": {
+        #         "properties": {
+        #             "source": {
+        #                 "type": "string",
+        #                 "index": "not_analyzed"
+        #             }
+        #         }
+        #     }
+        # })
 
         for column in source.column_map.values():
             if column.semantic_type:

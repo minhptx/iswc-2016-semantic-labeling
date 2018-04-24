@@ -44,7 +44,10 @@ class Column:
         if not value or value == "NULL":
             return
 
-        value = value.decode('utf-8').encode('ascii', 'ignore')
+        # try:
+            # value = value.decode('utf-8').encode('ascii', 'ignore')
+        # except:
+
         # try:
         #     value = value.encode("ascii", "ignore")
         # except:
